@@ -1,8 +1,8 @@
 package tarefa_1;
 
-public class Pessoa extends Operacoes{
+public class Pessoa extends Operacao {
 
-    String nome="";
+    private String nome="";
 	public String getNome() {
 		return nome;
 	}
@@ -10,26 +10,26 @@ public class Pessoa extends Operacoes{
 		this.nome = nome;
 	}	
 
-	int passosCaminhados= 0;
-	public int getTotalPassos() {
-		return passosCaminhados;
+	private int pegadas = 0;
+	public int getPegadas() {
+		return pegadas;
 	}
-	public void setTotalPassos(int totalPassos) {
-		this.passosCaminhados = totalPassos;
+	public void setPegadas(int pegadas) {
+		this.pegadas = pegadas;
 	}
 	
 	@Override
-	public int mostraPessoa(String operacao) {
+	public int pessoa(String operacao) {
 		if(operacao=="!") {
-			System.out.println("Pessoa: "+nome);
-			System.out.println("Passos Caminhados: "+passosCaminhados);
+			System.out.println("pessoa: "+nome);
+			System.out.println("Passos Caminhados: "+ pegadas);
 		}return 0;
 	}
 	
 	@Override
-	public int mostraPassos(String operacao) {
+	public int showPegadas(String operacao) {
 		if(operacao=="=") {
-			System.out.println("O número total de passos foi: "+passosCaminhados);
+			System.out.println("O número total de passos foi: "+ pegadas);
 		}return 0;
 	}
 }

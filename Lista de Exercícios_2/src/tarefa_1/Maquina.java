@@ -5,30 +5,30 @@ import java.util.List;
 
 public class Maquina {
 	
-	List<Operacoes> operacoes=new ArrayList<>();
+	List<Operacao> operacao =new ArrayList<>();
 	
-	public void adicionaOperacao(Operacoes op){
-		operacoes.add(op);
+	public void adicionaOperacao(Operacao op){
+		operacao.add(op);
 	}
 
 	public int addPassos(String operacao, int b) {
-		for(int i=0;i<operacoes.size();i++)
-			if(operacoes.get(i).addPassos(operacao, b)!=0)
-				return operacoes.get(i).addPassos(operacao, b);
+		for(int i = 0; i< this.operacao.size(); i++)
+			if(this.operacao.get(i).addPegadas(operacao, b)!=0)
+				return this.operacao.get(i).addPegadas(operacao, b);
 		return 0;	
 	}
 	
-	public int mostraPassos(String operacao) {
-		for(int i=0;i<operacoes.size();i++)
-			if(operacoes.get(i).mostraPassos(operacao)!=0)
-				return operacoes.get(i).mostraPassos(operacao);
+	public int showPegadas(String operacao) {
+		for(int i = 0; i< this.operacao.size(); i++)
+			if(this.operacao.get(i).showPegadas(operacao)!=0)
+				return this.operacao.get(i).showPegadas(operacao);
 		return 0;	
 	}
 	
-	public int mostraPessoa(String operacao) {
-		for(int i=0;i<operacoes.size();i++)
-			if(operacoes.get(i).mostraPessoa(operacao)!=0)
-				return operacoes.get(i).mostraPessoa(operacao);
+	public int pessoa(String operacao) {
+		for(int i = 0; i< this.operacao.size(); i++)
+			if(this.operacao.get(i).pessoa(operacao)!=0)
+				return this.operacao.get(i).pessoa(operacao);
 		return 0;	
 	}
 }
